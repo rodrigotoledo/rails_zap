@@ -1,0 +1,4 @@
+<%=form_for Message.new, remote: true do |form| %>
+  <%=form.hidden_field :conversation_id, value: conversation_id %>
+  <%=form.text_field :message, placeholder: 'Digite uma mensagem', class: 'w-full bg-transparent border-transparent border-0 focus:border-[#1f2c32] text-[#aebac1] h-8 focus:outline outline-none', data: {controller: "message", reflex: "keyup->message#typing", conversation_id: conversation_id} %>
+<% end %>

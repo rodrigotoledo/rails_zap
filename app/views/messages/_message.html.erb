@@ -1,0 +1,11 @@
+<% if message.user_id == current_user.id %>
+  <div class='flex justify-end items-baseline'>
+    <div class='text-white bg-[#005c4b] text-sm max-w-max my-[2px] p-2 rounded-md'><%=message.message %></div>
+    <div class='text-[#aebac1] text-sm'><%=l message.created_at, format: :short %></div>
+  </div>
+<% else %>
+  <div class='flex justify-start items-baseline'>
+    <div class='text-white bg-[#1f2c32] text-sm max-w-max my-[2px] p-2 rounded-md'><%=message.message %></div>
+    <div class='text-[#aebac1] text-sm'><%=l message.created_at, format: :short %></div>
+  </div>
+<% end %>

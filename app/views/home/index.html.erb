@@ -1,0 +1,47 @@
+<div class='flex flex-row'>
+  <div class='w-[20%] sm:w-[35%] border-r border-[#313e44] bg-[#111a21]'>
+    <div class='bg-[#1f2c32] p-4 flex flex-row justify-between'>
+      <div class='w-12 h-12 rounded-full bg-sky-200'></div>
+
+      <div class='text-right items-center flex justify-between'>
+        <i class="material-icons text-[#aebac1] mr-4">group</i>
+        <i class="material-icons text-[#aebac1] mr-4">radio_button_checked</i>
+        <i class="material-icons text-[#aebac1] mr-4">speaker_notes</i>
+        <i class="material-icons text-[#aebac1] mr-4">add_comment</i>
+        <i class="material-icons text-[#aebac1]">more_vert</i>
+      </div>
+    </div>
+
+    <div class='p-2'>
+      <div class='flex flex-col'>
+        <div>
+          <div class='p-1 flex flex-row items-center'>
+            <div class='bg-[#1f2c32] rounded flex flex-row items-center w-full'>
+              <i class="material-icons text-[#aebac1] mx-4">search</i>
+              <%=text_field_tag :search_start_conversation, '', placeholder: 'Pesquisar ou começar uma conversa', class: 'w-full bg-transparent border-transparent border-0 focus:border-[#1f2c32] text-[#aebac1] h-8 focus:outline outline-none', data: {controller: "room", reflex: "keyup->Room#search"} %>
+            </div>
+            <i class="material-icons text-[#aebac1] ml-2">filter_list</i>
+          </div>
+        </div>
+        <div class='h-screen overflow-y-auto'>
+          <div class='p-1 flex flex-row items-center border-b-[#313e44] border-b-[1px]'>
+            <div class='w-12 h-12 ml-2 mr-4 flex justify-center items-center'>
+              <i class="material-icons text-[#00a884]">event_available</i>
+            </div>
+            <div class='text-white'>Arquivadas</div>
+          </div>
+            <div id="last_messages">
+              <%=render partial: 'last_messages', locals: {conversations: current_user.conversations} %>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+  <div class='w-[80%] sm:w-[65%]'>
+    <div id="messages">
+      <h1 class='text-lg text-white text-center'>RailsCLONE</h1>
+    </div>
+  </div>
+</div>

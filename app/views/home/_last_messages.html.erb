@@ -1,0 +1,22 @@
+<%=turbo_stream_from "last_messages_stream" %>
+<% conversations.each do |conversation| %>
+  <div class='p-1 flex flex-row items-center border-b-[#313e44] border-b-[1px] hover:bg-[#313e44] hover:cursor-pointer py-2' data-controller="message" data-reflex="click->Message#conversation" data-conversation_id="<%=conversation.id%>">
+    <div class='w-20'>
+      <div class='w-12 h-12 rounded-full bg-sky-200 justify-center items-center flex'></div>
+    </div>
+
+    <div class='flex flex-col w-full'>
+      <div class='flex flex-row justify-between items-center'>
+        <div class='text-white w-full'><%= conversation.conversation_users.where.not(user_id: current_user.id).first.user.username %></div>
+        <div class='text-white font-thin text-sm whitespace-nowrap'><%= l conversation.last_message.created_at, format: :short %></div>
+      </div>
+
+      <div class='text-[#aebac1] mt-2 text-sm flex items-center'>
+        <i class="material-icons text-[#aebac1]">checklist_rtl</i>
+        <div id="receiving_message_<%=conversation.id %>_<%=current_user.id%>">
+          <%=render partial: 'receiving_message', locals: {last_message: conversation.last_message} %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
