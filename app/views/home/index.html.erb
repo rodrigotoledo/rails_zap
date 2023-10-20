@@ -35,7 +35,7 @@
       <%=render partial: 'last_messages', locals: {conversations: current_user.conversations.order(created_at: :desc)} %>
     </div>
   </div>
-  <div class='w-[80%] sm:w-[65%] border-r border-[#313e44] bg-[#111a21] items-center h-screen overflow-y-auto justify-center'>
+  <div class='w-[80%] sm:w-[65%] border-r border-[#313e44] bg-[#111a21] items-center justify-center'>
     <%=turbo_stream_from "messages_stream" %>
     <%=turbo_frame_tag "messages", class: "w-full flex items-center justify-center bg-[#111a21]" do %>
       <h1 class='text-lg text-white'>RailsCLONE</h1>

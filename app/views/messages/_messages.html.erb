@@ -1,4 +1,4 @@
-<div class="flex flex-col w-full ">
+<div class="flex flex-col w-full relative h-screen">
   <div class='flex flex-row justify-between sticky top-0 p-4 w-full items-center bg-[#1f2c32]'>
     <div class='flex flex-row items-center w-full'>
       <div class='w-12 h-12 rounded-full bg-sky-200 justify-center items-center flex mr-4'></div>
@@ -17,7 +17,7 @@
     </div>
   </div>
 
-  <div class='w-full px-40 sm:px-4' id="chat">
+  <div class='w-full px-40 sm:px-4 overflow-y-auto h-[100%] ' id="chat">
     <%conversation.messages.each do |message| %>
       <%= render partial: 'messages/message', locals: {message: message, current_user: current_user} %>
     <% end %>
