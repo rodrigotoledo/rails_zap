@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 class MessageReflex < ApplicationReflex
-  def conversation
-    conversation = Conversation.find(element.dataset.conversation_id)
-    morph '#messages', render(partial: 'home/messages', locals: {conversation: conversation})
+  def create
+    conversation = current_user.conversations.find(element.dataset.conversation_id)
+    message = conversation.messages.create(message: element.dataset.value)
+    morph '#chat', render(partial: 'messages/messages', locals: {conversation: conversation, messages: conversation.messages})
   end
 
   def typing

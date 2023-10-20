@@ -6,9 +6,8 @@ class Conversation < ApplicationRecord
   attr_accessor :last_message
 
   def last_messages(term = nil)
-    last_messages = messages.order("created_at DESC")
-    last_messages = messages.where("message LIKE ?","%#{term}%") unless term.blank?
-    last_messages.group("conversation_id")
+    last_messages = term.blank? ? self.messages : self.messages.where("message LIKE ?","%#{term}%")
+    last_messages.order("created_at DESC").group("conversation_id").all
   end
 
   def last_message

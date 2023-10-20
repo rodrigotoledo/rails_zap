@@ -4,7 +4,7 @@ class RoomReflex < ApplicationReflex
   def search
     last_messages = []
     current_user.conversations.each do |conversation|
-      last_messages << conversation.last_messages(element.value)
+      last_messages += conversation.last_messages(element.value)
     end
 
     conversations = Conversation.where(id: last_messages.map{|t| t.try(:conversation_id)})
