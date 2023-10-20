@@ -76,3 +76,4 @@ gem "stimulus_reflex", "= 3.5.0.rc3"
 # gem "redis-session-store", "0.11.5"
 
 gem "action-cable-redis-backport", "~> 1"
+gem 'sidekiq'

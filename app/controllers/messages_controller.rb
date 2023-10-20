@@ -4,7 +4,8 @@ class MessagesController < ApplicationController
     message = @conversation.messages.build(message_params)
     message.user_id = current_user.id
     message.save!
-    render turbo_stream: turbo_stream.preppend("messages", partial: "messages/messages",locals: {conversation: @conversation})
+    
+    head :ok
   end
 
   def index
