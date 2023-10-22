@@ -4,7 +4,7 @@
     <div class='flex justify-end '>
       <div class='pr-9 p-2 pb-3  text-white bg-[#005c4b] text-sm max-w-max my-[2px]  rounded-md relative'> 
         <%= message.message %>
-        <div class='horario text-[#aebac1]  absolute bottom-0 right-0 '>
+        <div class='p-1 horario text-[#aebac1] text-xs  absolute bottom-0 right-0 '>
           <%= message.created_at.strftime('%H:%M') %>
         </div>
       </div>
@@ -13,7 +13,7 @@
     <div class='flex justify-start items-baseline'>
       <div class='p-2 pr-9 pb-3  text-white bg-[#1f2c32] text-sm max-w-max my-[2px]  rounded-md relative'> 
         <%= message.message %>
-        <div class='horario text-[#aebac1] absolute bottom-0 right-0 '>
+        <div class='p-1 text-xs horario text-[#aebac1] absolute bottom-0 right-0 '>
           <%= message.created_at.strftime('%H:%M') %>
         </div>
       </div>
