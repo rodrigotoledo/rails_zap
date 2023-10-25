@@ -17,14 +17,11 @@
     </div>
   </div>
 
-  <div class='w-full px-40 sm:px-4 overflow-y-auto h-[100%] ' id="chat">
+  <%= turbo_stream_from "divs" %>
+  <div class='w-full px-40 sm:px-4 overflow-y-auto h-[100%]' id="chat"  data-controller= "scroll">
     <%conversation.messages.each do |message| %>
       <%= render partial: 'messages/message', locals: {message: message, current_user: current_user} %>
     <% end %>
-
-    <%= turbo_stream_from "divs" %>
-    <div id="append_outside_of_me">
-    </div>
   </div>
   <div class='bg-[#1f2c32] p-4 h-20 flex flex-row justify-start sticky bottom-0 w-full items-center '>
     <i class="material-icons text-[#aebac1]">add</i>
@@ -33,7 +30,11 @@
       <div class='flex flex-row items-center justify-center'>
         <div class='bg-[#2b3942] rounded-md flex flex-row items-center w-full'>
           <i class="material-icons text-[#aebac1] mx-4">mood</i>
-          <%=render partial: 'messages/form', locals: {conversation: conversation} %>
+          <turbo-frame id="your_frame_id">
+          <div>
+            <%=render partial: 'messages/form', locals: {conversation: conversation} %>
+          </turbo-frame>
+         
         </div>
       </div>
     </div>
