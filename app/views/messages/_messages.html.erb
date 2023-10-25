@@ -21,6 +21,10 @@
     <%conversation.messages.each do |message| %>
       <%= render partial: 'messages/message', locals: {message: message, current_user: current_user} %>
     <% end %>
+
+    <%= turbo_stream_from "divs" %>
+    <div id="append_outside_of_me">
+    </div>
   </div>
   <div class='bg-[#1f2c32] p-4 h-20 flex flex-row justify-start sticky bottom-0 w-full items-center '>
     <i class="material-icons text-[#aebac1]">add</i>

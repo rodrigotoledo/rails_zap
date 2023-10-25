@@ -2,10 +2,5 @@ class Message < ApplicationRecord
   belongs_to :conversation
   belongs_to :user
 
-  after_save :schedule_job
-  before_destroy :schedule_job
-
-  def schedule_job
-    MessagesJob.perform_later(self)
-  end
+  after_create_commit { broadcast_append_to "divs", target: "append_outside_of_me" }
 end

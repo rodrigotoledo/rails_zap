@@ -13,6 +13,19 @@
       <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+     <style>
+      <%= ".msg-#{current_user&.id}" %> {
+      background-color: #005c4b !important;
+      padding: 10px;
+      }
+      <%= ".cont-#{current_user&.id}" %> {
+        display: flex;
+        justify-content: flex-end
+        
+      }
+    </style>
   </head>
 
   <body class='bg-[#0c1417]'>
