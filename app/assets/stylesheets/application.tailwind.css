@@ -11,3 +11,8 @@
 }
 
 */
+
+
+.shadow-custom {
+  box-shadow: 0 10px 2px rgba(235, 4, 4, 0.801); /* Ajuste os valores conforme necessário */
+}

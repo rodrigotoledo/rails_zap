@@ -13,7 +13,7 @@ export default class extends Controller{
     }
 
     resetScroll(){
-        chat.scrollTop = chat.scrollHeight - chat.clientHeight;
+        chat.scrollTop = chat.scrollHeight - chat.clientHeight ;
     }
 
 

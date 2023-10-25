@@ -1,5 +1,5 @@
-<div class='conversations-table lg:mg-4 lg:h-[97%] flex flex-row  '>
-  <div class=' lg:mt-4 lg:ml-20  ml-2 lg:w-[30%] md:w-[45%] sm:w-[35%] border-r border-[#313e44] bg-[#111a21] items-center  overflow-y-auto justify-center'>
+<div class='md:mt-2 lg:mt-2 lg:ml-20 lg:mr-20 lg:mt-2 lg:ml-20  md:h-screen lg:mr-20 flex flex-row shadow-custom '>
+  <div class=' lg:mt-2 lg:ml-1 lg:w-[30%] md:w-[45%] sm:w-[35%] border-r border-[#313e44] bg-[#111a21] items-center  overflow-y-auto justify-center'>
     <div class='flex flex-col justify-between sticky top-0 w-full items-center bg-[#111a21] h-[11rem]'>
       <div class='bg-[#1f2c32] p-4 flex flex-row justify-between w-full'>
         <div class='w-12 h-12 rounded-full bg-sky-200'></div>
@@ -26,8 +26,7 @@
           <div class='w-12 h-12 flex justify-center items-center'>
             <i class="material-icons text-[#00a884]">event_available</i>
           </div>
-          <div class='text-white'>Arquivadas</div>
-          
+          <div class='text-white'>Arquivadas</div> 
         </div>
       </div>
     </div>
@@ -36,7 +35,7 @@
       <%=render partial: 'last_messages', locals: {conversations: current_user.conversations.order(created_at: :desc)} %>
     </div>
   </div>
-  <div class='  lg:mt-4  lg:mr-20 lg:w-[80%] sm:w-[65%] border-r border-[#313e44] bg-[#111a21] items-center justify-center'>
+  <div class='lg:mt-2 lg:w-[80%] sm:w-[65%] border-r border-[#313e44] bg-[#111a21] items-center justify-center' >
     <%=turbo_stream_from "messages" %>
     <%=turbo_frame_tag "messages", class: "w-full flex items-center justify-center bg-[#111a21]" do %>
       <h1 class='text-lg text-white'>RailsCLONE</h1>
