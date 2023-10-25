@@ -23,7 +23,9 @@
   outline: 0 none;
 }
 
-
+.conversations-table{
+  overflow-x: hidden;
+}
 html, body {
   overflow-y: hidden;
   overflow-x: hidden;

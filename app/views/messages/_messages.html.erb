@@ -1,4 +1,4 @@
-<div class="flex flex-col w-full relative h-screen ">
+<div class="flex flex-col w-full relative  lg:h-[890px] ">
   <div class='flex flex-row justify-between sticky top-0 p-4 w-full items-center bg-[#1f2c32]'>
     <div class='flex flex-row items-center w-full'>
       <div class='w-12 h-12 rounded-full bg-sky-200 justify-center items-center flex mr-4'></div>
@@ -23,21 +23,19 @@
       <%= render partial: 'messages/message', locals: {message: message, current_user: current_user} %>
     <% end %>
   </div>
-  <div class='bg-[#1f2c32] p-4 h-20 flex flex-row justify-start sticky bottom-0 w-full items-center '>
-    <i class="material-icons text-[#aebac1]">add</i>
-
+  
+  <div class=' bg-[#1f2c32] p-4 sticky w-full items-center '>
     <div class='w-full'>
       <div class='flex flex-row items-center justify-center'>
-        <div class='bg-[#2b3942] rounded-md flex flex-row items-center w-full'>
-          <i class="material-icons text-[#aebac1] mx-4">mood</i>
+        <i class="material-icons text-[#aebac1]">add</i>  
+        <i class="material-icons text-[#aebac1] mx-2">mood</i>
+        <div class='bg-[#2b3942] rounded-md flex flex-row items-center w-full'>  
           <turbo-frame id="your_frame_id">
-          <div>
+             <div>
             <%=render partial: 'messages/form', locals: {conversation: conversation} %>
-          </turbo-frame>
-         
+          </turbo-frame>  
+            </div> 
         </div>
-      </div>
+        <i class="material-icons text-[#aebac1] ml-2">mic</i>
     </div>
-    <i class="material-icons text-[#aebac1] ml-2">mic</i>
-  </div>
 </div>
