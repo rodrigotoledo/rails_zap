@@ -1,5 +1,5 @@
-<div class='flex flex-row'>
-  <div class='w-[20%] sm:w-[35%] border-r border-[#313e44] bg-[#111a21] items-center h-screen overflow-y-auto justify-center'>
+<div class='lg:mg-4 lg:h-[97%] flex flex-row '>
+  <div class=' lg:mt-4 lg:ml-20  ml-2 lg:w-[30%] md:w-[45%] sm:w-[35%] border-r border-[#313e44] bg-[#111a21] items-center  overflow-y-auto justify-center'>
     <div class='flex flex-col justify-between sticky top-0 w-full items-center bg-[#111a21] h-[11rem]'>
       <div class='bg-[#1f2c32] p-4 flex flex-row justify-between w-full'>
         <div class='w-12 h-12 rounded-full bg-sky-200'></div>
@@ -16,11 +16,11 @@
 
       <div class='flex flex-col w-full'>
         <div class='py-1 flex'>
-          <div class='bg-[#1f2c32] rounded flex flex-row w-full'>
-            <i class="material-icons text-[#aebac1] mx-4">search</i>
+          <div class='m-1 bg-[#1f2c32] rounded flex flex-row w-full'>
+            <i class="m-1 material-icons text-[#aebac1] mx-4">search</i>
             <%=text_field_tag :search_start_conversation, '', placeholder: 'Pesquisar ou começar uma conversa', class: 'w-full bg-transparent border-transparent border-0 focus:border-[#1f2c32] text-[#aebac1] h-8 focus:outline outline-none', data: {controller: "room", reflex: "keyup->Room#search"} %>
           </div>
-          <i class="material-icons text-[#aebac1] ml-2">filter_list</i>
+          <i class="m-2 material-icons text-[#aebac1] ml-2">filter_list</i>
         </div>
         <div class='px-1 flex flex-row items-center'>
           <div class='w-12 h-12 flex justify-center items-center'>
@@ -36,7 +36,7 @@
       <%=render partial: 'last_messages', locals: {conversations: current_user.conversations.order(created_at: :desc)} %>
     </div>
   </div>
-  <div class='w-[80%] sm:w-[65%] border-r border-[#313e44] bg-[#111a21] items-center justify-center'>
+  <div class='  lg:mt-4  lg:mr-20 lg:w-[80%] sm:w-[65%] border-r border-[#313e44] bg-[#111a21] items-center justify-center'>
     <%=turbo_stream_from "messages" %>
     <%=turbo_frame_tag "messages", class: "w-full flex items-center justify-center bg-[#111a21]" do %>
       <h1 class='text-lg text-white'>RailsCLONE</h1>

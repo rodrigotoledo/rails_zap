@@ -22,3 +22,29 @@
   box-shadow: none;
   outline: 0 none;
 }
+
+
+html, body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2f363873;
+}
+
+/* Cor de fundo da área de track (barra vazia) */
+::-webkit-scrollbar-track {
+  background-color:#111a21;  
+   
+}
+
+/* Cor da scrollbar quando o mouse passa por cima */
+::-webkit-scrollbar-thumb:hover {
+background-color: #555;
+}
