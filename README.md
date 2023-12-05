@@ -10,9 +10,8 @@ The purpose of this project is to recreate the visual aspects and some active fu
 - Material Icons
 - Stimulus
 - StimulusReflex
-- Broadcasting com hotwire-rails
-- Docker para
-  - Redis
+- Broadcasting with hotwire-rails
+- Docker with Redis
 
 ## What will be recreated
 The main interface that includes the list of recent chats on the left-hand side.
