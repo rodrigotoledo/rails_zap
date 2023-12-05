@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class MessageReflex < ApplicationReflex
+  delegate :current_user, to: :connection
   def create
     conversation = current_user.conversations.find(element.dataset.conversation_id)
-    message = conversation.messages.create(message: element.dataset.value)
     morph '#chat', render(partial: 'messages/messages', locals: {conversation: conversation, messages: conversation.messages})
   end
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resource :example, constraints: -> { Rails.env.development? }
   root 'home#index'
   devise_for :users
   resources :conversation do

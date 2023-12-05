@@ -18,7 +18,7 @@
         <div class='py-1 flex'>
           <div class='bg-[#1f2c32] rounded flex flex-row w-full'>
             <i class="material-icons text-[#aebac1] mx-4">search</i>
-            <%=text_field_tag :search_start_conversation, '', placeholder: 'Pesquisar ou começar uma conversa', class: 'w-full bg-transparent border-transparent border-0 focus:border-[#1f2c32] text-[#aebac1] h-8 focus:outline outline-none', data: {controller: "room", reflex: "keyup->Room#search"} %>
+            <%=text_field_tag :search_start_conversation, '', placeholder: 'Search or start a conversation', class: 'w-full bg-transparent border-transparent border-0 focus:border-[#1f2c32] text-[#aebac1] h-8 focus:outline outline-none', data: {controller: "room", reflex: "keyup->Room#search"} %>
           </div>
           <i class="material-icons text-[#aebac1] ml-2">filter_list</i>
         </div>
@@ -26,7 +26,7 @@
           <div class='w-12 h-12 flex justify-center items-center'>
             <i class="material-icons text-[#00a884]">event_available</i>
           </div>
-          <div class='text-white'>Arquivadas</div>
+          <div class='text-white'>Archived</div>
           
         </div>
       </div>

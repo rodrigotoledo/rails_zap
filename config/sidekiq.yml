@@ -1,11 +1,9 @@
-# config/sidekiq.yml
-
 development:
   :concurrency: 5
-  :url: redis://redis:6379/0 # Use o nome do serviço do contêiner Redis
+  :url: redis://redis:6379/0
   :namespace: myapp_sidekiq
 
 production:
   :concurrency: 10
-  :url: redis://redis:6379/0 # Use o nome do serviço do contêiner Redis
+  :url: redis://redis:6379/0
   :namespace: myapp_sidekiq

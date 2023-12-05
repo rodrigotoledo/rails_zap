@@ -18,5 +18,10 @@ services:
       - "6379:6379"
     networks:
       - myapp-network
+  yarn:
+    image: node:14
+    volumes:
+      - .:/app
+    working_dir: /app
 networks:
   myapp-network:

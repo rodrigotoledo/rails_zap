@@ -1,9 +1,8 @@
-# Projeto Rails ZAP (clone do whatsapp usando Ruby on Rails)
-O intuito deste projeto é recriar o mínimo visual do que o aplicativo web whatsapp oferece a seus usuários e também algumas funcionalidades ativas.
+# Rails ZAP Project (WhatsApp clone using Ruby on Rails)
 
-Já deixando bem claro que nem tudo será perfeitamente igual pois é um aplicativo muito complexo portanto a idéia é objetividade.
+The purpose of this project is to recreate the visual aspects and some active functionalities of the WhatsApp web application. Please note that not everything will be perfectly identical since WhatsApp is a very complex application; therefore, the goal is to achieve a simplified version.
 
-## O que será utilizado
+## What will be used
 - Ruby on Rails 7.x
 - ChatGPT
 - Devise
@@ -15,23 +14,23 @@ Já deixando bem claro que nem tudo será perfeitamente igual pois é um aplicat
 - Docker para
   - Redis
 
-## O que será recriado
-A interface principal que envolve a lista de últimas conversas em sua área a esquerda.
+## What will be recreated
+The main interface that includes the list of recent chats on the left-hand side.
 
-Centralmente, ao clicar em uma conversa serão exibidas as mensagens recebidas e enviadas para o usuário em questão.
+When clicking on a chat, the received and sent messages for the respective user will be displayed in the center.
 
-Possibilidade de na mesma tela enviar uma mensagem ao usuário em questão.
+Ability to send a message to the selected user on the same screen.
 
-## O que NÃO será recriado
-As funcionalidades de multimídia e ações das mesmas envolvem muito tempo de estudo e preparo para fazer da maneira mais correta possível, portanto nessa versão não irei desenvolver.
+## What will NOT be recreated
+Multimedia features and their related actions involve a significant amount of study and preparation to implement correctly. Therefore, these functionalities will not be developed in this version.
 
-Telas para Login e Criação de conta também não será utilizado, apesar de já ser utilizado Devise como opção de autenticação.
+Screens for login and account creation will also not be used, despite Devise being an authentication option.
 
-Recriação 100% fiel da versão mobile. Tentarei deixar próximo mas não irei dar prioridade.
+A 100% faithful recreation of the mobile version will not be the top priority. The goal is to get it close, but not to prioritize it.
 
-## Idéia da estrutrura do banco de dados
+## Database Structure Idea
 
-- Tabela `users` e seus campos
+- table and its fields
 ```
 id
 email
@@ -40,19 +39,19 @@ name
 profile_picture
 ```
 
-- Tabela `conversations` e seus campos
+- `conversations` table and its fields
 ```
 id
 ```
 
-- Tabela `conversations_users` e seus campos
+- `conversations_users` table and its fields
 ```
 id
 user_id
 conversation_id
 ```
 
-- Tabela `messages` e seus campos
+- `messages` table and its fields
 ```
 id
 conversation_id
@@ -60,7 +59,13 @@ user_id
 message
 ```
 
-## Contato para ajuda na live
+## Running
+To run the applicationn you need to run the following
+```
+./dev docker
+```
+
+## Contact for assistance during the live session
 rodrigo@rtoledo.inf.br
 
 +5533991221596 (whatsapp)

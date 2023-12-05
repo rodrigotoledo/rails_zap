@@ -70,7 +70,7 @@ gem "devise", "~> 4.9"
 gem "faker", "~> 3.2"
 
 gem "tailwindcss-rails", "~> 2.0"
-gem "stimulus_reflex", "= 3.5.0.rc3"
+gem "stimulus_reflex", "3.5.0.rc3"
 
 # StimulusReflex recommends using Redis for session storage
 # gem "redis-session-store", "0.11.5"
