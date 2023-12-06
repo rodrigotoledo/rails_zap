@@ -1,6 +1,6 @@
 <%=turbo_stream_from "last_messages_stream" %>
 <% conversations.each do |conversation| %>
-  <%=button_to conversation_messages_path(conversation), method: :get, class: 'p-1 flex flex-row items-center border-[#313e44] border-y-[1px] hover:bg-[#313e44] hover:cursor-pointer py-2 w-full' do %>
+  <%=content_tag :div, class: 'p-1 flex flex-row items-center border-[#313e44] border-y-[1px] hover:bg-[#313e44] hover:cursor-pointer py-2 w-full', data: {reflex: "click->Message#create", conversation_id: conversation.id} do %>
     <div class='w-20'>
       <div class='w-12 h-12 rounded-full bg-sky-200 justify-center items-center flex'></div>
     </div>

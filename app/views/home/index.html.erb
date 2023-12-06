@@ -37,9 +37,8 @@
     </div>
   </div>
   <div class='w-[80%] sm:w-[65%] border-r border-[#313e44] bg-[#111a21] items-center justify-center'>
-    <%=turbo_stream_from "messages" %>
-    <%=turbo_frame_tag "messages", class: "w-full flex items-center justify-center bg-[#111a21]" do %>
+    <div id="chat" class="w-full flex items-center justify-center bg-[#111a21]">
       <h1 class='text-lg text-white'>RailsCLONE</h1>
-    <% end %>
+    </div>
   </div>
 </div>

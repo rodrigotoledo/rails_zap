@@ -9,8 +9,7 @@ class MessagesController < ApplicationController
   end
 
   def index
-    @messages = @conversation.messages
-    render turbo_stream: turbo_stream.update("messages", partial: "messages/messages",locals: {conversation: @conversation})
+    render turbo_stream: turbo_stream.update("messages_#{@conversation.id}_#{current_user.id}", partial: "messages/messages",locals: {conversation: @conversation, current_user: current_user})
   end
 
   private
