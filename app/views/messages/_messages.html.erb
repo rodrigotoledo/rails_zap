@@ -4,9 +4,9 @@
       <div class='w-12 h-12 rounded-full bg-sky-200 justify-center items-center flex mr-4'></div>
 
       <div class='flex flex-col'>
-        <div class='text-white'><%=user_in_message(conversation).user.username%></div>
+        <div class='text-white'><%=user_in_message(conversation, current_user).user.username%></div>
         <div class='text-[#aebac1] text-sm flex items-center'>
-          Last message on <%=l user_in_message(conversation).created_at, format: :short%>
+          Visto por último <%=l user_in_message(conversation, current_user).created_at, format: :short%>
         </div>
       </div>
     </div>

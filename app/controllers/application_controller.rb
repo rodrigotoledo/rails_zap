@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include CableReady::Broadcaster
+  include Devise::Controllers::Helpers
   before_action :set_action_cable_identifier
   before_action :authenticate_user!
   protected

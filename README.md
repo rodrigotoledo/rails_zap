@@ -64,6 +64,11 @@ To run the applicationn you need to run the following
 ./dev docker
 ```
 
+Clearing the jobs
+```
+docker compose run web rails jobs:clear_queue
+```
+
 ## Contact for assistance during the live session
 rodrigo@rtoledo.inf.br
 
