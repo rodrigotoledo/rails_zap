@@ -21,7 +21,7 @@
   <%=turbo_frame_tag "messages_#{conversation.id}_#{current_user.id}", class: "w-full px-40 sm:px-4 overflow-y-auto h-full" do %>
     <%= render partial: 'messages/messages', locals: {conversation: conversation, current_user: current_user} %>
   <% end %>
-  <div class='bg-[#1f2c32] p-4 h-20 flex flex-row justify-start sticky bottom-0 w-full items-center '>
+  <div class='bg-[#1f2c32] p-4 h-20 flex flex-row justify-start fixed bottom-0 w-full items-center'>
     <i class="material-icons text-[#aebac1]">add</i>
 
     <div class='w-full'>

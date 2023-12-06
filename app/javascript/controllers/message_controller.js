@@ -10,6 +10,7 @@ export default class extends ApplicationController {
     const container = document.getElementById("chat")
     const placeHolder = document.getElementById("message_message")
     container.scrollTop = container.scrollHeight
+    console.log(container.scrollHeight)
     placeHolder.focus()
   }
 

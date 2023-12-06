@@ -1,5 +1,5 @@
 <div class='flex flex-row'>
-  <div class='w-[20%] sm:w-[35%] border-r border-[#313e44] bg-[#111a21] items-center h-screen overflow-y-auto justify-center'>
+  <div class='w-[20%] sm:w-[35%] border-r border-[#313e44] bg-[#111a21] items-center h-screen justify-center'>
     <div class='flex flex-col justify-between sticky top-0 w-full items-center bg-[#111a21] h-[11rem]'>
       <div class='bg-[#1f2c32] p-4 flex flex-row justify-between w-full'>
         <div class='w-12 h-12 rounded-full bg-sky-200'></div>
@@ -32,7 +32,7 @@
       </div>
     </div>
     
-    <div id="last_messages" class="bg-[#111a21]">
+    <div id="last_messages" class="bg-[#111a21] overflow-y-auto flex flex-col h-full">
       <%=render partial: 'last_messages', locals: {conversations: current_user.conversations.order(created_at: :desc)} %>
     </div>
   </div>
